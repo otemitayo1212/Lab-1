@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Portfolio</title>
     <link rel="stylesheet" href="./resources/styles/style.css">
+    <script src="./resources/scripts/script.js"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -16,9 +17,7 @@
                     <div class="team-name">Team Legacy</div>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    
                 </ul>
             </nav>
         </div>
@@ -67,59 +66,107 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team Section with hCard microformat -->
     <section id="team" class="team">
         <div class="container">
             <h2 class="section-title">Meet Our Team</h2>
             <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <div class="member-photo">Photo</div>
-                    <h3 class="member-name">Gutierrez, Eric</h3>
-                    <p>Frontend Developer</p>
-                    <a href="./profiles/gutiee2.html" class="member-link">View Portfolio</a>
+                <!-- Team Member 1 with hCard -->
+                <div class="member vcard">
+                    <div class="member-photo">
+                        <img class="photo" src="./resources/images/eric-headshot.jpg" alt="Eric Gutierrez Headshot">
+                    </div>
+                    <h3 class="member-name fn">Eric Gutierrez</h3>
+                    <p class="title">Frontend Developer</p>
+                    <div class="org" style="display: none;">Team Legacy</div>
+                    <div class="email" style="display: none;">
+                        <a href="mailto:eric@teamlegacy.com">eric@teamlegacy.com</a>
+                    </div>
+                    <a href="./profiles/gutiee2.html" class="member-link url">View Portfolio</a>
                 </div>
                 
-                <!-- Team Member 2 -->
-                <div class="member">
-                    <div class="member-photo">Photo</div>
-                    <h3 class="member-name">Kannan, Kaaviya</h3>
-                    <p>UI/UX Designer</p>
-                    <a href="./profiles/kannak.html" class="member-link">View Portfolio</a>
+                <!-- Team Member 2 with hCard -->
+                <div class="member vcard">
+                    <div class="member-photo photo">Photo</div>
+                    <h3 class="member-name fn">Kaaviya Kannan</h3>
+                    <p class="title">UI/UX Designer</p>
+                    <div class="org" style="display: none;">Team Legacy</div>
+                    <div class="email" style="display: none;">
+                        <a href="mailto:kaaviya@teamlegacy.com">kaaviya@teamlegacy.com</a>
+                    </div>
+                    <a href="./profiles/kannak.html" class="member-link url">View Portfolio</a>
                 </div>
                 
-                <!-- Team Member 3 -->
-                <div class="member">
-                    <div class="member-photo">Photo</div>
-                    <h3 class="member-name">Semidey Pablo</h3>
-                    <p>Backend Developer</p>
-                    <a href="./profiles/semidp.html" class="member-link">View Portfolio</a>
+                <!-- Team Member 3 with hCard -->
+                <div class="member vcard">
+                    <div class="member-photo">
+                        <img class="photo" src="./resources/images/pablo-headshot.jpg" alt="Pablo Semidey Headshot">
+                    </div>
+                    <h3 class="member-name fn">Pablo Semidey</h3>
+                    <p class="title">Backend Developer</p>
+                    <div class="org" style="display: none;">Team Legacy</div>
+                    <div class="email" style="display: none;">
+                        <a href="mailto:pablo@teamlegacy.com">pablo@teamlegacy.com</a>
+                    </div>
+                    <a href="./profiles/semidp.html" class="member-link url">View Portfolio</a>
                 </div>
-                <!-- Team Member 4 -->
-                <div class="member">
-                    <div class="member-photo">Photo</div>
-                    <h3 class="member-name">Zheng, Jason</h3>
-                    <p>Backend Developer</p>
-                    <a href="./profiles/zhengj12.html" class="member-link">View Portfolio</a>
+                
+                <!-- Team Member 4 with hCard -->
+                <div class="member vcard">
+                    <div class="member-photo photo">Photo</div>
+                    <h3 class="member-name fn">Jason Zheng</h3>
+                    <p class="title">Backend Developer</p>
+                    <div class="org" style="display: none;">Team Legacy</div>
+                    <div class="email" style="display: none;">
+                        <a href="mailto:jason@teamlegacy.com">jason@teamlegacy.com</a>
+                    </div>
+                    <a href="./profiles/zhengj12.html" class="member-link url">View Portfolio</a>
                 </div>
 
-                 <!-- Team Member 5 -->
-
-                 <div class="member">
-                    <div class="member-photo">Photo</div>
-                    <h3 class="member-name">Temitayo</h3>
-                    <p>Backend Developer</p>
-                    <a href="./profiles/oladet.html" class="member-link">View Portfolio</a>
+                <!-- Team Member 5 with hCard -->
+                <div class="member vcard">
+                    <div class="member-photo">
+                        <img class="photo" src="./resources/images/Temi-headshot.jpg" alt="Temitayo Headshot">
+                    </div>
+                    <h3 class="member-name fn">Temitayo Oladeji</h3>
+                    <p class="title">Backend Developer</p>
+                    <div class="org" style="display: none;">Team Legacy</div>
+                    <div class="email" style="display: none;">
+                        <a href="mailto:temi@teamlegacy.com">temi@teamlegacy.com</a>
+                    </div>
+                    <a href="./profiles/oladet.html" class="member-link url">View Portfolio</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Team hCard -->
     <footer id="contact">
         <div class="container">
+            <div class="vcard">
+                <h3 class="fn org">Team Legacy</h3>
+                <div class="adr">
+                    <div class="street-address">Rensselaer Polytechnic Institute</div>
+                    <div class="extended-address">110 8th Street</div>
+                    <span class="locality">Troy</span>, 
+                    <span class="region">NY</span> 
+                    <span class="postal-code">12180</span>
+                    <div class="country-name">United States</div>
+                </div>
+                <div class="email">
+                    Contact: <a href="mailto:contact@teamlegacy.com">contact@teamlegacy.com</a>
+                </div>
+                <div class="tel">
+                    Phone: <span class="type">work</span> <span class="value">+1-518-276-6000</span>
+                </div>
+                <div class="url">
+                    Website: <a href="https://teamlegacy.com">teamlegacy.com</a>
+                </div>
+                <div class="note">
+                    Team Legacy - Innovating Tomorrow's Solutions Today. Specializing in web development, UI/UX design, and backend solutions.
+                </div>
+            </div>
             <p>&copy; 2025 Team Legacy. All rights reserved.</p>
-            <p>Contact us: contact@teamlegacy.example.com</p>
         </div>
     </footer>
 </body>
