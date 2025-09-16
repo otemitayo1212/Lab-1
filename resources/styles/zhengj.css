@@ -15,14 +15,20 @@
     background-color: black;
     width: 30%;
     height: 350px;
+    /*
     position: absolute;
     top: -90px;
     left: -30px;
+    */
+    margin-right: 10px;
+    margin-bottom: 20px;
+    float: left;
+    
 }
 
 #greet {
     top: 0px;
-    left: 27%;
+    /*left: 27%;*/
     position: relative;
     font-size: 24px;
 }
