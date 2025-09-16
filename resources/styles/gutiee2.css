@@ -1,0 +1,260 @@
+/* Page wrapper */
+#resume {
+    padding: 3rem 0 4rem;
+  }
+  
+  /* Section headings */
+  #resume .resume-section h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin: 2.5rem 0 1rem;
+    position: relative;
+    letter-spacing: 0.3px;
+  }
+  
+  #resume .resume-section h2::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: #3498db;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+  
+  /* Links inside resume */
+  #resume a {
+    color: #2c3e50;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(52,152,219,0.35);
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  
+  #resume a:hover {
+    color: #3498db;
+    border-color: #3498db;
+  }
+  
+  .resume-hero {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    margin-top: 1.5rem;
+  }
+  
+  .resume-identity .full-name {
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .resume-identity .contact {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .resume-identity .contact-label {
+    font-weight: 700;
+    margin-right: 4px;
+    opacity: 0.95;
+  }
+  
+  .resume-photo {
+    justify-self: end;
+    text-align: center;
+  }
+  
+  .resume-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.85);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  
+  .resume-photo figcaption {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+  }
+  
+  /* ===== Section base ===== */
+  .resume-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    margin-top: 1.25rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  
+  /* Shared card layout for items */
+  .edu-item,
+  .exp-item {
+    background: #f8f9fa;
+    border: 1px solid #eef2f6;
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    margin-top: 0.9rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .edu-item:hover,
+  .exp-item:hover {
+    transform: translateY(-3px);
+    border-color: #dfe7ef;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+  }
+  
+  /* Headers inside cards */
+  .edu-header,
+  .exp-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    align-items: baseline;
+  }
+  
+  .edu-item .institution,
+  .exp-item .org {
+    font-size: 1.05rem;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .edu-dates,
+  .title-and-dates .dates {
+    color: #566573;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+  
+  .degree,
+  .title-and-dates .title {
+    margin-top: 0.25rem;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  /* Details lists */
+  .resume-section ul.details {
+    margin-top: 0.6rem;
+    margin-left: 1.1rem;
+    display: grid;
+    gap: 0.35rem;
+    list-style: disc;
+  }
+  
+  .resume-section ul.details li {
+    color: #333;
+  }
+  
+  /* Skills */
+  #skills .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.6rem;
+    list-style: none;
+    margin-top: 0.75rem;
+    padding-left: 0;
+  }
+  
+  #skills .skills-list li {
+    background: #eaf4fe;
+    color: #2c3e50;
+    border: 1px solid #d6e9fb;
+    padding: 0.45rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+  }
+  
+  #skills .skills-list li:hover {
+    background: #dff0ff;
+    transform: translateY(-1px);
+  }
+  
+  /* Footer within resume page */
+  footer.container {
+    text-align: center;
+    color: #566573;
+  }
+  
+  footer.container a {
+    color: #3498db;
+    border-bottom: 1px solid rgba(52,152,219,0.35);
+  }
+  
+  footer.container a:hover {
+    border-color: #3498db;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 980px) {
+    .resume-hero {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+  
+    .resume-photo {
+      justify-self: start;
+    }
+  
+    .resume-photo img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .edu-header,
+    .exp-header {
+      grid-template-columns: 1fr;
+    }
+  
+    .edu-dates,
+    .title-and-dates .dates {
+      justify-self: start;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    #resume {
+      padding: 2rem 0 3rem;
+    }
+  
+    .resume-identity .full-name {
+      font-size: 1.6rem;
+    }
+  
+    .resume-section {
+      padding: 1rem 1rem 1.1rem;
+    }
+  }
+  
+  @media print {
+    header, nav, footer { display: none !important; }
+    body { background: #fff; color: #000; }
+    #resume { padding: 0; }
+    .resume-hero {
+      color: #000;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: none;
+    }
+    .resume-photo img { border: 3px solid #333; }
+    .resume-section {
+      box-shadow: none;
+      border: 1px solid #ddd;
+      break-inside: avoid;
+    }
+    a { color: #000; border: none; text-decoration: underline; }
+  }
+  
