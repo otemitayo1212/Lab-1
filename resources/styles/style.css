@@ -203,7 +203,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #888;
+    overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.member-photo img {
+    width: 100%; /* Make the image fit within the circle */
+    height: 100%; /* Ensure the image covers the circle */
+    object-fit: cover; /* Maintain aspect ratio and cover the circle */
 }
 
 .member-name {
