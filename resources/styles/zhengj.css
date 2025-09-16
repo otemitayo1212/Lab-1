@@ -1,0 +1,28 @@
+.main-body {
+    width: 60%;
+    background-color: #61aaee;
+    display: flex;
+    border-radius: 20px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+    min-height: 95vh;
+    position: relative;
+}
+
+#picture {
+    background-color: black;
+    width: 30%;
+    height: 350px;
+    position: absolute;
+    top: -90px;
+    left: -30px;
+}
+
+#greet {
+    top: 0px;
+    left: 27%;
+    position: relative;
+    font-size: 24px;
+}
