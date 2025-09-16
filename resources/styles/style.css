@@ -255,3 +255,25 @@ footer {
         font-size: 1.5rem;
     }
 }
+
+ /* Basic hCard styling to maintain visual consistency */
+ .vcard {
+    margin: 10px 0;
+}
+.vcard .fn {
+    font-weight: bold;
+}
+.vcard .title {
+    font-style: italic;
+    color: #666;
+}
+.vcard .adr {
+    margin: 5px 0;
+}
+.vcard .email a, .vcard .url a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.vcard .email a:hover, .vcard .url a:hover {
+    text-decoration: underline;
+}
