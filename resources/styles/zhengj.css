@@ -1,7 +1,6 @@
 .main-body {
     width: 60%;
     background-color: #61aaee;
-    display: flex;
     border-radius: 20px;
     padding: 30px;
     margin-left: auto;
@@ -15,15 +14,9 @@
     background-color: black;
     width: 30%;
     height: 350px;
-    /*
-    position: absolute;
-    top: -90px;
-    left: -30px;
-    */
     margin-right: 10px;
     margin-bottom: 20px;
     float: left;
-    
 }
 
 #greet {
@@ -31,4 +24,14 @@
     /*left: 27%;*/
     position: relative;
     font-size: 24px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.references {
+    margin-top: 25px;
+}
+
+p {
+    margin-top: 50px;
 }
