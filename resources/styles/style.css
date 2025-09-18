@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Global Styles - Updated with harmonious color palette */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #2d3748;
+    background-color: #f8fafc;
 }
 
 .container {
@@ -19,10 +19,10 @@ body {
     padding: 0 15px;
 }
 
-/* Header Styles */
+/* Header Styles - Clean white with subtle shadow */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-shadow: 0 2px 20px rgba(74, 85, 104, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -44,8 +44,8 @@ nav {
 .logo-placeholder img {
     width: 50px;
     height: 50px;
-    border-radius: 6px;   /* makes logos slightly rounded */
-    object-fit: contain;  /* keeps aspect ratio */
+    border-radius: 6px;
+    object-fit: contain;
     display: block;
 }
 
@@ -53,21 +53,21 @@ nav {
 .project-image img {
     width: 100%;
     height: 200px;
-    object-fit: cover;   /* fills the area without distortion */
+    object-fit: cover;
     display: block;
-    border-bottom: 1px solid #ddd; /* adds subtle separation */
+    border-bottom: 1px solid #e2e8f0;
     transition: transform 0.3s ease;
 }
 
 .project:hover .project-image img {
-    transform: scale(1.05); /* zoom effect on hover */
+    transform: scale(1.05);
 }
-
 
 .team-name {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #1a202c;
+    margin-left: 12px;
 }
 
 .nav-links {
@@ -81,20 +81,20 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #4a5568;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: #667eea;
 }
 
-/* Hero Section */
+/* Hero Section - Harmonious gradient */
 .hero {
     padding: 4rem 0;
     text-align: center;
-    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
@@ -102,34 +102,38 @@ nav {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button {
     display: inline-block;
     padding: 0.8rem 2rem;
-    background-color: #e74c3c;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
 }
 
 .cta-button:hover {
-    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
 }
 
 /* Portfolio Section */
 .portfolio {
     padding: 4rem 0;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #1a202c;
     position: relative;
+    font-size: 2.2rem;
 }
 
 .section-title::after {
@@ -137,8 +141,9 @@ nav {
     display: block;
     width: 50px;
     height: 3px;
-    background-color: #3498db;
+    background: linear-gradient(90deg, #667eea, #764ba2);
     margin: 10px auto;
+    border-radius: 2px;
 }
 
 .projects {
@@ -148,24 +153,26 @@ nav {
 }
 
 .project {
-    background-color: #f8f9fa;
-    border-radius: 8px;
+    background-color: #ffffff;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 8px 30px rgba(74, 85, 104, 0.1);
+    transition: all 0.3s;
+    border: 1px solid #e2e8f0;
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(74, 85, 104, 0.15);
 }
 
 .project-image {
     height: 200px;
-    background-color: #e0e0e0;
+    background-color: #f1f5f9;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #888;
+    color: #a0aec0;
 }
 
 .project-info {
@@ -175,13 +182,19 @@ nav {
 .project-title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #2c3e50;
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.project-info p {
+    color: #4a5568;
+    line-height: 1.6;
 }
 
 /* Team Section */
 .team {
     padding: 4rem 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 .team-members {
@@ -194,59 +207,88 @@ nav {
     text-align: center;
     background-color: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(74, 85, 104, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 85, 104, 0.15);
 }
 
 .member-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #e0e0e0;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
     margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* Ensure the image stays within the circle */
+    border: 3px solid #e2e8f0;
 }
 
 .member-photo img {
     width: 100%;
-    /* Make the image fit within the circle */
     height: 100%;
-    /* Ensure the image covers the circle */
     object-fit: cover;
-    /* Maintain aspect ratio and cover the circle */
 }
 
 .member-name {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #2c3e50;
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.member .title {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 .member-link {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #3498db;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 .member-link:hover {
-    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #e2e8f0;
     padding: 2rem 0;
     text-align: center;
+}
+
+footer .fn.org {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+footer .email a,
+footer .url a {
+    color: #667eea;
+}
+
+footer .email a:hover,
+footer .url a:hover {
+    color: #f093fb;
 }
 
 /* Responsive Design */
@@ -271,95 +313,97 @@ footer {
 
 .vcard .fn {
     font-weight: bold;
+    color: #1a202c;
 }
 
 .vcard .title {
     font-style: italic;
-    color: #666;
+    color: #667eea;
 }
 
 .vcard .adr {
     margin: 5px 0;
+    color: #4a5568;
 }
 
 .vcard .email a,
 .vcard .url a {
-    color: #0066cc;
+    color: #667eea;
     text-decoration: none;
 }
 
 .vcard .email a:hover,
 .vcard .url a:hover {
     text-decoration: underline;
+    color: #f093fb;
 }
 
-/* Portfolio Cards */
-
-/* zhengj12.html  */
+/* Portfolio Cards - Jason's Profile Styles */
 .main-body {
     margin-top: 80px;
     background: #ffffff;
     border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, .07);
+    box-shadow: 0 8px 30px rgba(74, 85, 104, 0.1);
     display: flow-root;
-    /* clears the float on #picture */
+    border: 1px solid #e2e8f0;
 }
 
 #picture {
     --avatar-url: url("../resources/images/jason.jpg");
     background:
-        linear-gradient(180deg, rgba(52, 152, 219, .15), rgba(255, 255, 255, 0)) padding-box,
+        linear-gradient(180deg, rgba(102, 126, 234, .15), rgba(255, 255, 255, 0)) padding-box,
         var(--avatar-url) border-box center/cover no-repeat,
-        #0f172a;
+        #1a202c;
     width: 220px;
     height: 280px;
     float: left;
     margin: 6px 20px 16px 0;
     border-radius: 12px;
-    border: 1px solid #dbe5f3;
-    box-shadow: inset 0 1px 0 #ffffff, 0 8px 20px rgba(0, 0, 0, .06);
+    border: 1px solid #e2e8f0;
+    box-shadow: inset 0 1px 0 #ffffff, 0 8px 20px rgba(74, 85, 104, 0.1);
 }
 
 .zhengjBody {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #273041;
+    color: #2d3748;
     background:
-        radial-gradient(900px 600px at 10% -10%, rgba(111, 66, 193, 0.18), transparent 60%),
-        radial-gradient(800px 500px at 90% 0%, rgba(52, 152, 219, 0.18)),
-        linear-gradient(135deg, #8cb6e5, #6481b9 60%, #3a80d1);
+        radial-gradient(900px 600px at 10% -10%, rgba(102, 126, 234, 0.15), transparent 60%),
+        radial-gradient(800px 500px at 90% 0%, rgba(118, 75, 162, 0.15)),
+        linear-gradient(135deg, #f8fafc, #e2e8f0 60%, #cbd5e0);
     min-height: 100dvh;
 }
 
 #greet {
     top: 0px;
-    /*left: 27%;*/
     position: relative;
     font-size: 24px;
     margin-bottom: 50px;
     margin-top: 50px;
+    color: #1a202c;
 }
 
 #about {
     font-size: 1.8rem;
     margin-bottom: 8px;
-    color: #1f2a44;
+    color: #1a202c;
 }
 
 #desc {
     margin: 8px 0 16px;
-    color: #3a4760;
+    color: #4a5568;
 }
 
 .references a {
-    color: #1d66a5;
+    color: #667eea;
     text-decoration: none;
     font-weight: 700;
 }
 
 .references a:hover {
     text-decoration: underline;
+    color: #764ba2;
 }
 
 .content-wrap {
@@ -369,20 +413,20 @@ footer {
 .soft {
     border: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #e6eef8, transparent);
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
     margin: 18px 0;
 }
 
 h2 {
     font-size: 1.2rem;
     margin: 14px 0 8px;
-    color: #23324b;
+    color: #1a202c;
 }
 
 .bullets {
     margin-left: 1.2rem;
     list-style: disc;
-    color: #3a4760;
+    color: #4a5568;
 }
 
 .bullets li {
@@ -395,10 +439,11 @@ h2 {
 
 p {
     margin-top: 50px;
+    color: #4a5568;
 }
 
 footer {
-    color: #4b5874;
+    color: #a0aec0;
     text-align: center;
     padding: 24px 0;
     font-size: 0.95rem;
