@@ -40,25 +40,29 @@ nav {
     align-items: center;
 }
 
-.logo-placeholder {
+/* Logo Image Styling */
+.logo-placeholder img {
     width: 50px;
     height: 50px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: inherit;
-    text-decoration: none;
-    font-weight: inherit;
+    border-radius: 6px;   /* makes logos slightly rounded */
+    object-fit: contain;  /* keeps aspect ratio */
+    display: block;
 }
 
-.logo-placeholder a {
-    text-decoration: none;
-    color: inherit;
+/* Portfolio Project Images */
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;   /* fills the area without distortion */
+    display: block;
+    border-bottom: 1px solid #ddd; /* adds subtle separation */
+    transition: transform 0.3s ease;
 }
+
+.project:hover .project-image img {
+    transform: scale(1.05); /* zoom effect on hover */
+}
+
 
 .team-name {
     font-size: 1.5rem;
