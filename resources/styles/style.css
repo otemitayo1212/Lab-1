@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Global Styles - Updated with harmonious color palette */
+/* Global Styles - Updated color palette */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -90,7 +90,7 @@ nav {
     color: #667eea;
 }
 
-/* Hero Section - Harmonious gradient */
+/* Hero Section - gradient */
 .hero {
     padding: 4rem 0;
     text-align: center;
