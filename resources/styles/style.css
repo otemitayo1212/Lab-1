@@ -526,6 +526,45 @@ footer {
     display: none;
 }
 
+/* Headshot styling */
+.profile-photo.headshot {
+  width: 140px;          /* smaller container */
+  height: 180px;         /* taller for headshot aspect */
+  border-radius: 8px;    /* slight rounding instead of full circle */
+  overflow: hidden;
+  margin: 1rem auto;     /* center on small screens */
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo.headshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* keep proportions, crop overflow */
+  object-position: top;  /* focus on top part of headshot */
+}
+
+/* Force white text inside the profile header */
+.white-profile,
+.white-profile h1,
+.white-profile .title,
+.white-profile .adr,
+.white-profile .tel,
+.white-profile .email,
+.white-profile .contact-info a,
+.white-profile strong {
+  color: #fff !important;
+}
+
+/* Make links white + underline on hover */
+.white-profile .contact-info a {
+  text-decoration: none;
+}
+.white-profile .contact-info a:hover {
+  text-decoration: underline;
+}
+
+
 @media (max-width: 768px) {
     .portfolio-container {
         padding: 10px;
