@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jason Zheng - Portfolio</title>
-    <link rel="stylesheet" href="../resources/styles/style.css">
-    <script src="../resources/scripts/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jason Zheng - Portfolio</title>
+  <link rel="stylesheet" href="../resources/styles/style.css" />
+  <script defer src="../resources/scripts/script.js"></script>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo-container">
-                    <div class="logo-placeholder"><a href="../index.html">TL</a></div>
-                    <div class="team-name">Team Legacy</div>
-                </div>
-                <ul class="nav-links"></ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="main-body">
-        <div id="picture"></div>
-        <subsection id="greet"><h5>Hello! My name is Jason Zheng. </h5></subsection>
-        
-        <div class="references">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/jason-zheng-3254762a0/">LinkedIn</a></li>
-                <li><a href="https://github.com/Jason-Z1">GitHub</a></li>
-            </ul>
+<body class="zhengjBody">
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo-container">
+          <div class="logo-placeholder"><a href="../index.html">TL</a></div>
+          <div class="team-name">Team Legacy</div>
         </div>
-        
-        <p>I am currently a 2nd year at Rensselaer Polytechnic Institute pursuing Computer Science and 
-            Information Technology & Web Science.
+        <ul class="nav-links"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Card (Wikipedia-style) -->
+  <section class="main-body container">
+    <div id="picture" aria-label="Portrait"></div>
+
+    <div class="content-wrap">
+      <h1 id="about">Hello! I’m Jason Zheng.</h1>
+      <p class="desc">
+        I’m a 2nd-year at Rensselaer Polytechnic Institute studying
+        Computer Science and Information Technology &amp; Web Science.
       </p>
-    </section>
 
+      <div class="references">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/jason-zheng-3254762a0/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/Jason-Z1" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:zhengj12@rpi.edu">Email</a></li>
+        </ul>
+      </div>
+
+      <hr class="soft" />
+
+      <h2 id="portfolio">Projects (quick peek)</h2>
+      <ul class="bullets">
+        <li>Social media app prototype (vanilla JS + PHP + MySQL).</li>
+        <li>Course projects in Data Structures &amp; Algorithms.</li>
+      </ul>
+
+      <h2 id="team">About Me (short)</h2>
+      <ul class="bullets">
+        <li>Interests: full-stack, UI polish, simple/fast interfaces.</li>
+        <li>Open to SWE internships and web collabs.</li>
+      </ul>
+
+      <h2 id="contact">Contact</h2>
+      <p>Best way to reach me: <a href="mailto:zhengj12@rpi.edu">zhengj12@rpi.edu</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Jason Zheng
+    </div>
+  </footer>
 </body>
 </html>
