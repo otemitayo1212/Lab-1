@@ -203,13 +203,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensure the image stays within the circle */
+    overflow: hidden;
+    /* Ensure the image stays within the circle */
 }
 
 .member-photo img {
-    width: 100%; /* Make the image fit within the circle */
-    height: 100%; /* Ensure the image covers the circle */
-    object-fit: cover; /* Maintain aspect ratio and cover the circle */
+    width: 100%;
+    /* Make the image fit within the circle */
+    height: 100%;
+    /* Ensure the image covers the circle */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the circle */
 }
 
 .member-name {
@@ -246,38 +250,156 @@ footer {
     .nav-links {
         display: none;
     }
-    
+
     .hero {
         padding: 2rem 0;
     }
-    
+
     .slogan {
         font-size: 1.5rem;
     }
 }
 
- /* Basic hCard styling to maintain visual consistency */
- .vcard {
+/* Basic hCard styling to maintain visual consistency */
+.vcard {
     margin: 10px 0;
 }
+
 .vcard .fn {
     font-weight: bold;
 }
+
 .vcard .title {
     font-style: italic;
     color: #666;
 }
+
 .vcard .adr {
     margin: 5px 0;
 }
-.vcard .email a, .vcard .url a {
+
+.vcard .email a,
+.vcard .url a {
     color: #0066cc;
     text-decoration: none;
 }
-.vcard .email a:hover, .vcard .url a:hover {
+
+.vcard .email a:hover,
+.vcard .url a:hover {
+    text-decoration: underline;
+}
+/* Portfolio Cards */
+
+/* zhengj12.html  */
+.main-body {
+    margin-top: 80px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .07);
+    display: flow-root;
+    /* clears the float on #picture */
+}
+
+#picture {
+    --avatar-url: url("../resources/images/jason.jpg");
+    background:
+        linear-gradient(180deg, rgba(52, 152, 219, .15), rgba(255, 255, 255, 0)) padding-box,
+        var(--avatar-url) border-box center/cover no-repeat,
+        #0f172a;
+    width: 220px;
+    height: 280px;
+    float: left;
+    margin: 6px 20px 16px 0;
+    border-radius: 12px;
+    border: 1px solid #dbe5f3;
+    box-shadow: inset 0 1px 0 #ffffff, 0 8px 20px rgba(0, 0, 0, .06);
+}
+
+.zhengjBody {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #273041;
+    background:
+        radial-gradient(900px 600px at 10% -10%, rgba(111, 66, 193, 0.18), transparent 60%),
+        radial-gradient(800px 500px at 90% 0%, rgba(52, 152, 219, 0.18)),
+        linear-gradient(135deg, #8cb6e5, #6481b9 60%, #3a80d1);
+    min-height: 100dvh;
+}
+
+#greet {
+    top: 0px;
+    /*left: 27%;*/
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#about {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #1f2a44;
+}
+
+#desc {
+    margin: 8px 0 16px;
+    color: #3a4760;
+}
+
+.references a {
+    color: #1d66a5;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.references a:hover {
     text-decoration: underline;
 }
 
+.content-wrap {
+    overflow: hidden;
+}
+
+.soft {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e6eef8, transparent);
+    margin: 18px 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 14px 0 8px;
+    color: #23324b;
+}
+
+.bullets {
+    margin-left: 1.2rem;
+    list-style: disc;
+    color: #3a4760;
+}
+
+.bullets li {
+    margin: 6px 0;
+}
+
+.references {
+    margin-top: 25px;
+}
+
+p {
+    margin-top: 50px;
+}
+
+footer {
+    color: #4b5874;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 0.95rem;
+}
+
+/* gutiee2.html */
         /* Portfolio-specific styles */
         .portfolio-container {
             max-width: 1000px;
