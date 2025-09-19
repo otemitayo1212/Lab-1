@@ -1,4 +1,4 @@
-# Web Systems Lab 1: Portfolio Website - Team Legacy
+# Web Systems Lab 1: Portfolio Website - Data Pulse
 
 ## Team Information
 **Team Name:** Digital pulse  
@@ -22,7 +22,7 @@
 - Set up basic HTML file structure with proper naming conventions
 
 ### Group Portfolio Development (Day 2)
-- Designed team branding with "Team Legacy" name and professional slogan
+- Designed team branding with "Data Pulse" name and professional slogan
 - Created index.html with team information and navigation
 - Added project mockups for E-Commerce Platform, Task Management App, and Weather Dashboard
 - Implemented responsive CSS Grid layout for project showcase
