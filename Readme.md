@@ -4,11 +4,11 @@
 **Team Name:** Digital pulse  
 **Team Slogan:** "Building Digital Solutions That Last"  
 **Team Members:**
-- Eric Gutierrez - gutiee2 - gutierrez@rpi.edu
-- Kaaviya Kannan - kannak - kannan@rpi.edu  
-- Pablo Semidey - semidp - semidey@rpi.edu
-- Jason Zheng - zhengj12 - zheng@rpi.edu
-- Temitayo Oladeji - oladet - oladeji@rpi.edu
+- Eric Gutierrez - gutiee2 - gutiee2@rpi.edu
+- Kaaviya Kannan - kannak - kannak@rpi.edu  
+- Pablo Semidey - semidp - semidp@rpi.edu
+- Jason Zheng - zhengj12 - zhengj12@rpi.edu
+- Temitayo Oladeji - oladet - oladet@rpi.edu
 
 ## Repository Links
 - **Group Repository:** https://github.com/otemitayo1212/Lab-1
