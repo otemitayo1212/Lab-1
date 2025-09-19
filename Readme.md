@@ -15,33 +15,33 @@
 
 ## Work Log
 
-### Initial Setup (Week 1)
+### Initial Setup (Day 1)
 - Created GitHub repository structure
 - Discussed team roles and responsibilities
 - Researched portfolio design inspiration
 - Set up basic HTML file structure with proper naming conventions
 
-### Group Portfolio Development (Week 2)
+### Group Portfolio Development (Day 2)
 - Designed team branding with "Team Legacy" name and professional slogan
 - Created index.html with team information and navigation
 - Added project mockups for E-Commerce Platform, Task Management App, and Weather Dashboard
 - Implemented responsive CSS Grid layout for project showcase
 - Added team member photos and basic information cards
 
-### Individual Portfolio Pages (Week 3)
+### Individual Portfolio Pages (Day 3)
 - Each member created their individual portfolio page (rcsid.html format)
 - Added required sections: contact info, education, work experience, skills
 - Implemented professional styling consistent with group design
 - Ensured all personal information was properly formatted
 
-### Microformats Implementation (Week 4)
+### Microformats Implementation (Day 4)
 - Researched hCard microformat specifications on microformats.org
 - Added hCard classes to all team member contact information
 - Implemented vcard, fn, email, tel, adr, and org classes
 - Added hidden organizational information for semantic markup
 - Tested microformat structure for proper implementation
 
-### Final Testing and Validation (Week 5)
+### Final Testing and Validation (Day 5)
 - Validated all HTML files using W3C HTML validator
 - Validated CSS using W3C CSS validator
 - Tested responsive design on multiple screen sizes
