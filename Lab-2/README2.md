@@ -24,7 +24,7 @@
 ---
 
 ## Time Spent  
-Total: **3 days (~6–7 hours total)**  
+Total: **1 day (1 hour total)**  
 - Day 1: ~1 hour  
 
 ---
