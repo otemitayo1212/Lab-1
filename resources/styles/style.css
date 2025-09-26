@@ -19,6 +19,11 @@ body {
     padding: 0 15px;
 }
 
+.credit{
+    font-size: 12px;
+    
+}
+
 /* Header Styles - Clean white with subtle shadow */
 header {
     background-color: #ffffff;

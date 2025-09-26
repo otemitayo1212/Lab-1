@@ -7,9 +7,12 @@
 
 ## Work Log  
 
-### 9/26/2025 
+### 9/23/2025 - 9/26/2025 
 - Reorganized the IA so that it matched the intended beginning structure
 - Cleaned up some scripts and correctly set new paths for files that were moved.
+- Created a new entry into "Our Portfolio" section and correctly pathed the
+reference.
+- Helped with analysis of the Constitution and specific articles.
 
 ---
 
@@ -24,7 +27,8 @@
 ---
 
 ## Time Spent  
-Total: **1 day (1 hour total)**  
-- Day 1: ~1 hour  
+Total: **2 days (3 hour total)**  
+- Day 1: ~2 hour
+- Day 2: ~1 hour  
 
 ---

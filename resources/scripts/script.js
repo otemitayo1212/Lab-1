@@ -1,8 +1,7 @@
 const barItems = [
    { itemName: "Portfolio", ref: "#portfolio" },
    { itemName: "Our Team", ref: "#team" },
-   { itemName: "Contact", ref: "#contact" },
-   { itemName: "Constitution Day 🇺🇸", ref: "./Lab-2/index.html", external: true }
+   { itemName: "Contact", ref: "#contact" }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
