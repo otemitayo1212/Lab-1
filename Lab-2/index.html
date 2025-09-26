@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive U.S. Constitution - Constitution Day 2025</title>
+    <link rel="stylesheet" href="./resources/styles/constitution-style.css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>The U.S. Constitution</h1>
+            <p>Interactive Guide for Constitution Day - September 17, 2025</p>
+        </header>
+
+        <div class="constitution-day-info">
+            <h2>🇺🇸 Constitution Day & Citizenship Day</h2>
+            <p>September 17th commemorates the signing of the United States Constitution on September 17, 1787. This day reminds us of the fundamental principles that govern our democracy and the rights and responsibilities we share as citizens. The Constitution remains a living document that continues to shape American life and your rights as students and citizens.</p>
+        </div>
+
+        <nav class="navigation">
+            <button class="nav-btn" onclick="showSection('history')">History</button>
+            <button class="nav-btn" onclick="showSection('articles')">Articles I-VII</button>
+            <button class="nav-btn" onclick="showSection('bill-of-rights')">Bill of Rights</button>
+            <button class="nav-btn" onclick="showSection('preamble')">Preamble</button>
+            <a href="../index.html" class="nav-btn" style="background: linear-gradient(135deg, #27ae60, #2ecc71); text-decoration: none; color: white;">← Back to Portfolio</a>
+        </nav>
+
+        <section id="preamble" class="section active">
+            <article class="article">
+                <h2>The Preamble</h2>
+                <div class="original-text">
+                    <p>"We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America."</p>
+                </div>
+                <div class="analysis">
+                    <h3>Analysis</h3>
+                    <p>The Preamble serves as the Constitution's mission statement, outlining six fundamental purposes for establishing the new government. The phrase "We the People" was revolutionary - it established that government derives its power from citizens, not from divine right or hereditary rule.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Why This Matters Today</h4>
+                    <p>As RPI students, you're part of "We the People." When you vote in elections, participate in peaceful protests, or engage in civic discourse on campus, you're exercising the sovereignty the Preamble establishes. The goals outlined here - justice, tranquility, defense, welfare, and liberty - remain active principles in debates about government policy, from student loan programs to free speech on campus.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="history" class="section">
+            <div class="history-section">
+                <h2>History of the Constitution</h2>
+                <p>The Constitution was born from necessity. After the Articles of Confederation proved too weak to govern effectively, delegates from 12 states (Rhode Island didn't attend) gathered in Philadelphia during the hot summer of 1787.</p>
+                
+                <p>The Constitutional Convention was supposed to merely revise the Articles of Confederation, but the delegates quickly realized they needed to start over. James Madison, often called the "Father of the Constitution," came prepared with detailed plans for a new government structure.</p>
+                
+                <p>Key compromises shaped our government: the Great Compromise created our bicameral legislature (House based on population, Senate with equal state representation), and the Three-Fifths Compromise addressed how enslaved people would be counted for representation purposes - a morally troubling decision that reflected the era's injustices.</p>
+                
+                <p>The document was signed on September 17, 1787, by 39 of the 42 delegates present. However, it still needed ratification by nine states to become law. The ratification process sparked intense debates between Federalists (who supported the Constitution) and Anti-Federalists (who feared it gave too much power to the federal government). The promise to add a Bill of Rights helped secure ratification, which was completed in 1788 when New Hampshire became the ninth state to approve it.</p>
+            </div>
+        </section>
+
+        <section id="articles" class="section">
+            <article class="article">
+                <h2>Article I - The Legislative Branch</h2>
+                <button class="toggle-btn" onclick="toggleText('article1-text')">Toggle Original Text</button>
+                <div id="article1-text" class="original-text" style="display: none;">
+                    <p><strong>Section 1:</strong> All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.</p>
+                    <p><strong>Section 8:</strong> The Congress shall have Power To lay and collect Taxes, Duties, Imposts and Excises, to pay the Debts and provide for the common Defence and general Welfare of the United States... [and 17 other enumerated powers including regulating interstate commerce, coining money, and declaring war]</p>
+                </div>
+                <div class="analysis">
+                    <h3>Deep Dive Analysis</h3>
+                    <p>Article I is the longest article because the founders saw Congress as the most important branch of government - closest to the people and holder of the "power of the purse." The enumerated powers in Section 8 establish what Congress can do, while the Necessary and Proper Clause (the "elastic clause") allows Congress to make laws needed to carry out these powers.</p>
+                    <p>The bicameral structure balances representation by population (House) with equal state representation (Senate), ensuring both large and small states have meaningful voices in lawmaking.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Impact on Your Life</h4>
+                    <p>Every federal law that affects you - from student loan programs to environmental regulations to minimum wage - comes from Article I powers. When Congress debates infrastructure spending that could improve RPI's campus connectivity, or education funding that affects your tuition costs, they're exercising Article I authority. The Commerce Clause has been interpreted to allow federal regulation of everything from civil rights to internet privacy.</p>
+                </div>
+                <div class="fun-fact">
+                    <strong>Did You Know?</strong> The House was designed to be the "people's house" with 2-year terms to keep representatives close to voters, while Senators serve 6-year terms to provide stability and resist popular pressures.
+                </div>
+            </article>
+
+            <article class="article">
+                <h2>Article II - The Executive Branch</h2>
+                <button class="toggle-btn" onclick="toggleText('article2-text')">Toggle Original Text</button>
+                <div id="article2-text" class="original-text" style="display: none;">
+                    <p><strong>Section 1:</strong> The executive Power shall be vested in a President of the United States of America. He shall hold his Office during the Term of four Years...</p>
+                    <p><strong>Section 2:</strong> The President shall be Commander in Chief of the Army and Navy of the United States... he shall have Power to grant Reprieves and Pardons... he shall have Power, by and with the Advice and Consent of the Senate, to make Treaties...</p>
+                </div>
+                <div class="analysis">
+                    <h3>Deep Dive Analysis</h3>
+                    <p>Article II creates a single executive - a bold choice since many founders feared monarchy. The president serves as both head of state and head of government, combining ceremonial duties with executive power. The Electoral College system reflects the federal compromise, giving states a role in presidential selection rather than direct popular vote.</p>
+                    <p>Executive powers include enforcement of laws, military command, diplomatic relations, and the appointment of federal judges and officials (with Senate consent for key positions).</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Impact on Your Life</h4>
+                    <p>Presidential decisions affect your daily life through executive orders, agency regulations, and treaty negotiations. When the President issues student loan forgiveness programs, sets immigration policies that affect international students at RPI, or makes trade deals that impact job markets for engineering graduates, they're using Article II powers. The president's appointment of Supreme Court justices shapes constitutional interpretation for decades.</p>
+                </div>
+                <div class="fun-fact">
+                    <strong>Did You Know?</strong> The Constitution doesn't explicitly create a Cabinet, but presidents have formed them since Washington's administration to help manage the executive branch.
+                </div>
+            </article>
+
+            <article class="article">
+                <h2>Article III - The Judicial Branch</h2>
+                <button class="toggle-btn" onclick="toggleText('article3-text')">Toggle Original Text</button>
+                <div id="article3-text" class="original-text" style="display: none;">
+                    <p><strong>Section 1:</strong> The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish...</p>
+                    <p><strong>Section 2:</strong> The judicial Power shall extend to all Cases, in Law and Equity, arising under this Constitution, the Laws of the United States, and Treaties made...</p>
+                </div>
+                <div class="analysis">
+                    <h3>Deep Dive Analysis</h3>
+                    <p>Article III establishes federal courts and defines their jurisdiction. The Supreme Court's power of judicial review - to declare laws unconstitutional - isn't explicitly stated but was established in Marbury v. Madison (1803). Federal judges serve "during good behaviour" (essentially for life) to ensure independence from political pressure.</p>
+                    <p>The judicial branch serves as a check on legislative and executive power, ensuring laws and actions comply with constitutional principles.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Impact on Your Life</h4>
+                    <p>Federal courts protect your constitutional rights - from free speech in campus protests to due process in disciplinary hearings. Recent Supreme Court cases about student speech online, affirmative action in college admissions, and student loan forgiveness directly affect RPI students. When universities are sued over free speech policies or discrimination claims, Article III courts provide the forum for resolution.</p>
+                </div>
+                <div class="fun-fact">
+                    <strong>Did You Know?</strong> The Constitution doesn't specify the number of Supreme Court justices - it's been as few as 6 and as many as 10, settling at 9 since 1869.
+                </div>
+            </article>
+
+            <article class="article">
+                <h2>Articles IV-VII - Federalism and Structure</h2>
+                <div class="analysis">
+                    <h3>Article IV - Relations Between States</h3>
+                    <p>Requires states to respect each other's laws, legal decisions, and public records. The Full Faith and Credit Clause means your New York driver's license is valid in California, and the Privileges and Immunities Clause prevents states from discriminating against out-of-state residents.</p>
+                    
+                    <h3>Article V - The Amendment Process</h3>
+                    <p>Establishes how the Constitution can be changed, requiring supermajority support to ensure amendments have broad consensus while allowing adaptation to changing times.</p>
+                    
+                    <h3>Article VI - Federal Supremacy</h3>
+                    <p>Makes the Constitution and federal law supreme over state law when they conflict, while requiring all officials to swear oath to the Constitution.</p>
+                    
+                    <h3>Article VII - Ratification</h3>
+                    <p>Required approval by nine state conventions to establish the Constitution, reflecting the principle that government derives from popular consent.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Why These Matter Today</h4>
+                    <p>These articles enable you to travel freely between states, transfer college credits, and have your degree recognized nationally. Federal supremacy means civil rights protections apply everywhere, while the amendment process allows constitutional evolution - from ending slavery to establishing women's suffrage to potentially addressing modern issues like digital privacy.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="bill-of-rights" class="section">
+            <article class="amendment">
+                <h2>First Amendment - Freedom of Expression</h2>
+                <div class="original-text">
+                    <p>"Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances."</p>
+                </div>
+                <div class="analysis">
+                    <h3>Deep Dive Analysis</h3>
+                    <p>The First Amendment protects five distinct but related freedoms: religion (both establishment and free exercise), speech, press, assembly, and petition. These work together to ensure robust democratic participation and protect minority viewpoints from majoritarian suppression.</p>
+                    <p>The amendment has been interpreted to protect symbolic speech, commercial speech, and even offensive speech, though with some limits (like direct incitement to violence or true threats).</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Campus Life Connection</h4>
+                    <p>Your right to join student organizations, protest university policies, publish controversial opinions in student newspapers, or practice your religion on campus all stem from the First Amendment. When RPI debates speech codes, hosts speakers, or addresses religious accommodation requests, First Amendment principles guide these decisions. Social media posts, academic research, and classroom discussions are all protected forms of expression.</p>
+                </div>
+                <div class="fun-fact">
+                    <strong>Did You Know?</strong> The First Amendment only applies to government censorship, not private platforms or universities, though public universities must respect these rights more fully than private institutions.
+                </div>
+            </article>
+
+            <article class="amendment">
+                <h2>Second Amendment - Right to Bear Arms</h2>
+                <div class="original-text">
+                    <p>"A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed."</p>
+                </div>
+                <div class="analysis">
+                    <h3>Deep Dive Analysis</h3>
+                    <p>The Second Amendment's meaning has been heavily debated, with disagreements over whether it protects individual rights or only collective militia rights. The Supreme Court's 2008 Heller decision established an individual right to bear arms while allowing reasonable regulations.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Campus Safety Perspective</h4>
+                    <p>This amendment influences campus security policies, concealed carry laws on college campuses, and debates about armed security. Different states have varying laws about firearms on university property, affecting student safety policies and emergency response protocols.</p>
+                </div>
+            </article>
+
+            <article class="amendment">
+                <h2>Fourth Amendment - Protection from Unreasonable Searches</h2>
+                <div class="original-text">
+                    <p>"The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized."</p>
+                </div>
+                <div class="analysis">
+                    <h3>Deep Dive Analysis</h3>
+                    <p>The Fourth Amendment requires government searches to be "reasonable" and generally requires warrants based on probable cause. It protects privacy expectations while balancing law enforcement needs and public safety.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Digital Age Implications</h4>
+                    <p>Your smartphone, laptop, dorm room, and digital communications are protected by Fourth Amendment principles. Issues like campus police searches, surveillance cameras, email privacy, and data collection by universities all involve Fourth Amendment considerations. The amendment is evolving to address digital privacy, cloud storage, and location tracking.</p>
+                </div>
+                <div class="fun-fact">
+                    <strong>Did You Know?</strong> Courts are still determining how the Fourth Amendment applies to modern technology - from cell phone searches to facial recognition to drone surveillance.
+                </div>
+            </article>
+
+            <article class="amendment">
+                <h2>Amendments 5-10 - Additional Rights</h2>
+                <div class="analysis">
+                    <h3>Fifth Amendment - Legal Protections</h3>
+                    <p>Protects against self-incrimination, double jeopardy, and requires due process before government can deprive you of life, liberty, or property. The "taking" clause ensures fair compensation for government seizure of private property.</p>
+                    
+                    <h3>Sixth Amendment - Fair Trial Rights</h3>
+                    <p>Guarantees speedy and public trial, impartial jury, right to know charges, confront witnesses, compel testimony, and have legal counsel in criminal cases.</p>
+                    
+                    <h3>Seventh Amendment - Civil Jury Trials</h3>
+                    <p>Preserves right to jury trial in civil cases involving significant monetary amounts, ensuring citizen participation in dispute resolution.</p>
+                    
+                    <h3>Eighth Amendment - Humane Punishment</h3>
+                    <p>Prohibits excessive bail, excessive fines, and cruel and unusual punishment, establishing baseline standards for treatment in the criminal justice system.</p>
+                    
+                    <h3>Ninth Amendment - Unenumerated Rights</h3>
+                    <p>Clarifies that listing specific rights doesn't mean people don't have other rights, preventing government from claiming unlimited power over unlisted areas.</p>
+                    
+                    <h3>Tenth Amendment - Reserved Powers</h3>
+                    <p>Reserves powers not given to federal government to states and people, establishing federalism principle that limits federal authority.</p>
+                </div>
+                <div class="modern-relevance">
+                    <h4>Student Life Applications</h4>
+                    <p>These amendments affect university disciplinary procedures (due process), campus housing policies, student fee structures, privacy rights, and the balance between federal education mandates and state/institutional autonomy. They ensure fair treatment in both criminal matters and civil disputes that might affect your college experience.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script src="./resources/script/constitution-script.js"></script>
+</body>
+</html>
