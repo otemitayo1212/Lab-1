@@ -58,8 +58,10 @@ group-repo/
 │   ├── resources/
 │   │   ├── styles/
 │   │   │   └── style.css
+|   |   |   └── constitution-style.css
 │   │   ├── scripts/
 │   │   │   └── script.js
+|   |   |   └── constitution-script.js
 │   │   └── images/
 │   │       ├── team-logo2.png
 │   │       ├── eric-headshot.jpg
@@ -79,13 +81,6 @@ group-repo/
 │   └── README.md
 ├── lab2/                      
 │   ├── index.html              # Constitution web app
-│   ├── resources/
-│   │   ├── styles/
-│   │   │   └── constitution-style.css
-│   │   ├── scripts/
-│   │   │   └── constitution-script.js
-│   │   └── images/
-│   │       └── constitution-day-banner.jpg
 │   └── README.md               # Individual README files (one per team member)
 └── README.md                   # Main project README
 
