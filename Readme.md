@@ -52,29 +52,42 @@
 
 ### File Structure
 ```
-lab1/
-├── index.html              # Group portfolio homepage
-├── resources/
-│   ├── styles/
-│   │   └── style.css       # Main stylesheet
-│   ├── scripts/
-│   │   └── script.js       # JavaScript functionality
-│   └── images/             # All images and photos
-│       ├── team-logo.jpg
-│       ├── eric-headshot.jpg
-│       ├── kaaviya_headshot.jpeg
-│       ├── pablo-headshot.jpg
-│       ├── jason.jpg
-│       ├── Temi-headshot.jpg
-│       └── project mockups/
-├── profiles/
-│   ├── gutiee2.html        # Eric's portfolio
-│   ├── kannak.html         # Kaaviya's portfolio
-│   ├── semidp.html         # Pablo's portfolio
-│   ├── zhengj12.html       # Jason's portfolio
-│   └── oladet.html         # Temitayo's portfolio
-└── README.md               # This documentation
-```
+group-repo/
+├── lab1/
+│   ├── index.html              # Your existing group portfolio
+│   ├── resources/
+│   │   ├── styles/
+│   │   │   └── style.css
+│   │   ├── scripts/
+│   │   │   └── script.js
+│   │   └── images/
+│   │       ├── team-logo2.png
+│   │       ├── eric-headshot.jpg
+│   │       ├── kaaviya_headshot.jpeg
+│   │       ├── pablo-headshot.jpg
+│   │       ├── jason.jpg
+│   │       ├── Temi-headshot.jpg
+│   │       ├── ecommerce-platform.webp
+│   │       ├── task-management-app.webp
+│   │       └── weather-dashboard.jpg
+│   ├── profiles/
+│   │   ├── gutiee2.html
+│   │   ├── kannak.html
+│   │   ├── semidp.html
+│   │   ├── zhengj12.html
+│   │   └── oladet.html
+│   └── README.md
+├── lab2/                      
+│   ├── index.html              # Constitution web app
+│   ├── resources/
+│   │   ├── styles/
+│   │   │   └── constitution-style.css
+│   │   ├── scripts/
+│   │   │   └── constitution-script.js
+│   │   └── images/
+│   │       └── constitution-day-banner.jpg
+│   └── README.md               # Individual README files
+└── README.md                   # Main project README
 
 ### Technologies Used
 - **HTML5:** Semantic markup with proper document structure

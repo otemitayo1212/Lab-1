@@ -1,24 +1,30 @@
 const barItems = [
    { itemName: "Portfolio", ref: "#portfolio" },
    { itemName: "Our Team", ref: "#team" },
-   { itemName: "Contact", ref: "#contact" }
-]
-
+   { itemName: "Contact", ref: "#contact" },
+   { itemName: "Constitution Day 🇺🇸", ref: "./Lab-2/index.html", external: true }
+];
 
 document.addEventListener("DOMContentLoaded", function () {
    const navLinks = document.querySelector('.nav-links');
    navLinks.innerHTML = "";
+
    // Detect if we're in a subdirectory (e.g., /profiles/)
    const isProfilePage = window.location.pathname.includes('/profiles/');
+
    barItems.forEach(item => {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      // If on a profile page, link to index.html with hash, else just hash
-      if (isProfilePage) {
-         a.href = `../index.html${item.ref}`;
-      } else {
+
+      if (item.external) {
+         // Constitution Day is an external file, so just use its ref
          a.href = item.ref;
+         a.classList.add("constitution-nav-item");
+      } else {
+         // If on a profile page, link to index.html with hash, else just hash
+         a.href = isProfilePage ? `../index.html${item.ref}` : item.ref;
       }
+
       a.textContent = item.itemName;
       li.appendChild(a);
       navLinks.appendChild(li);
