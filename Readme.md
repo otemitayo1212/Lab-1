@@ -86,7 +86,7 @@ group-repo/
 │   │   │   └── constitution-script.js
 │   │   └── images/
 │   │       └── constitution-day-banner.jpg
-│   └── README.md               # Individual README files
+│   └── README.md               # Individual README files (one per team member)
 └── README.md                   # Main project README
 
 ### Technologies Used
