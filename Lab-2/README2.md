@@ -2,6 +2,7 @@
 ## Lab 2: Constitution Day Web App  
 
 **Name:** Jason Zheng  
+
 ---
 
 ## Work Log  
