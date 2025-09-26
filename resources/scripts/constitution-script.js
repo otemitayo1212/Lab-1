@@ -1,4 +1,5 @@
 // Constitution Web App JavaScript Functions
+// Lab 02
 
 /**
  * Show the selected section and hide others
