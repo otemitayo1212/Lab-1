@@ -10,8 +10,9 @@
 - Made all titles in content blocks the same element (h3) for easier management.
 
 ### Day 2 - 9/26/2025
-- Altered some of the block colors to a darker tone for better visibility of text
 - Changed title text to be same color for consistency.
+- Altered some of the block colors to a darker tone for better visibility of text.
+- Fixed the shade of some colors for a cleaner UI
 
 ---
 
