@@ -46,3 +46,15 @@ INSERT INTO courses VALUES
 (74557, 'CSCI', 2700, 'Introduction to RCOS', '01', 2025);
 
 ```
+
+- INSERT at least 4 students into the students table 
+
+**NOTE: Change the value of phone in the table to BigInt for the phone numbers to correctly insert. Also again, only an example. Customize it however.**
+```
+INSERT INTO students VALUES
+(12345, 'zheng12', 'Jason', 'Zheng', 'Jason', 2158335883, 'Pinewoods Ave', 'Troy', 'NY', '12180'),
+(23456, 'kannak', 'Kaaviya', 'Kannan', 'Kaaviya', 7328645700, 'George Ave', 'Edison', 'NJ', '08820'),
+(34567, 'semidp', 'Pablo', 'Semidey', 'Pablo the Goat', 7876673739, 'Burdett Ave', 'Troy', 'NY', '12180'),
+(45678, 'gutiee2', 'Eric', 'Gutierrez', 'Eric', 2013963411, 'Tibbits Ave', 'Troy', 'NY', '12180'),
+(56789, 'oladet', 'Temitayo', 'Oladeji', 'Tem', 3472648049, 'Random St', 'Merrick', 'NY', '12345');
+```
