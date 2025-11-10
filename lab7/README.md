@@ -36,6 +36,7 @@ CREATE TABLE grades (
 ```
 
 -  INSERT at least 4 courses into the courses table
+
 **NOTE: this is only an example, you can customize it**
 ```
 INSERT INTO courses VALUES 
