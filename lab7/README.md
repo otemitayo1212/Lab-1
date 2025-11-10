@@ -58,3 +58,71 @@ INSERT INTO students VALUES
 (45678, 'gutiee2', 'Eric', 'Gutierrez', 'Eric', 2013963411, 'Tibbits Ave', 'Troy', 'NY', '12180'),
 (56789, 'oladet', 'Temitayo', 'Oladeji', 'Tem', 3472648049, 'Random St', 'Merrick', 'NY', '12345');
 ```
+
+- ADD 10 grades into the grades table 
+
+***Only as examples, can change values to your preferences***
+```
+INSERT INTO grades VALUES
+(1, 73048, 12345, 99),
+(2, 73048, 23456, 95),
+(3, 73048, 34567, 100),
+(4, 73048, 45678, 99),
+(5, 73048, 56789, 99),
+(6, 75422, 12345, 94),
+(7, 75422, 23456, 88),
+(8, 75422, 34567, 93),
+(9, 73215, 12345, 80),
+(10, 73215, 23456, 82);
+```
+
+- List all students in the following sequences; in lexicographical order by RIN, last name, RCSID, and first name.
+
+```
+SELECT * FROM students ORDER BY RIN;
+
+....
+
+SELECT * FROM students ORDER BY last_name;
+
+....
+
+SELECT * FROM students ORDER BY RCSID;
+
+....
+
+SELECT * FROM students ORDER BY first_name;
+
+....
+
+```
+
+- List all students RIN, name, and address if their grade in any course was higher than a 90 
+
+```
+SELECT DISTINCT students.RIN, students.first_name, students.last_name, 
+       students.street, students.city, students.state, students.zip
+FROM students
+JOIN grades ON students.RIN = grades.RIN
+WHERE grades.grade > 90;
+
+...
+```
+
+- List out the average grade in each course 
+
+```
+SELECT crn, AVG(grade) AS average_grade
+FROM grades
+GROUP BY crn;
+
+...
+```
+
+- List out the number of students in each course
+
+```
+SELECT crn, COUNT(RIN) AS student_count
+FROM grades
+GROUP BY crn;
+```
