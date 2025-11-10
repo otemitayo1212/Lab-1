@@ -49,7 +49,7 @@ INSERT INTO courses VALUES
 
 - INSERT at least 4 students into the students table 
 
-**NOTE: Change the value of phone in the table to BigInt for the phone numbers to correctly insert. Also again, only an example. Customize it however.**
+**NOTE: Change the value of phone in the table to BigInt for the phone numbers to accurately insert. Also again, only an example. Customize it however.**
 ```
 INSERT INTO students VALUES
 (12345, 'zheng12', 'Jason', 'Zheng', 'Jason', 2158335883, 'Pinewoods Ave', 'Troy', 'NY', '12180'),
