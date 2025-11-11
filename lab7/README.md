@@ -4,6 +4,11 @@ In this lab, we are utilizing PHP, phpmyadmin, and mySQL to create and manage a 
 
 For this assignment, we used XAMPP to download Apache, MySQL, and PHP in order to access phpmyadmin database and create our own tables. The XAMPP Control Panel allows you to run Apache and MySQL on command and link the source files to the localhost.
 
+1. Open XAMPP Control Panel and start Apache and mySQL
+2. Type into the browser: "localhost/phpmyadmin"
+3. Create the database and the tables
+4. Use the SQL scripts to paste data into the tables
+
 ---
 
 # Logs
