@@ -133,3 +133,131 @@ SELECT crn, COUNT(RIN) AS student_count
 FROM grades
 GROUP BY crn;
 ```
+
+## Part 3
+
+- Add JSON column into courses table
+
+```
+ALTER TABLE courses
+ADD COLUMN course_json JSON;
+```
+
+- Insert Spooky Web Sys into courses
+
+```
+INSERT INTO courses (crn, prefix, number, title)
+VALUES (12345, 'ITWS', 2210, 'Spooky Web Sys')
+ON DUPLICATE KEY UPDATE title = VALUES(title);
+```
+
+- Upload the JSON onto json column
+
+```
+UPDATE courses
+SET course_json = '{
+  "Websys_course": {
+    "Lectures": {
+      "Lecture 1": {
+        "Title": "Class Intro",
+        "Description": "Lecture covering course introduction and overview."
+      },
+      "Lecture 2": {
+        "Title": "Frontend review",
+        "Description": "Lecture refreshing information about HTML and Group formations."
+      },
+      "Lecture 3": {
+        "Title": "Frontend review",
+        "Description": "Lecture covering frontend basics like servers, http port, etc."
+      },
+      "Lecture 4": {
+        "Title": "Frontend review",
+        "Description": "Reviews CSS concepts and work on lab 1."
+      },
+      "Lecture 5": {
+        "Title": "CSS Lecture",
+        "Description": "Continuations of CSS and Brian Clark presented Datasets for projects."
+      },
+      "Lecture 6": {
+        "Title": "US Consitution",
+        "Description": "work on lab 2 which was based on the constitution"
+      },
+      "Lecture 7": {
+        "Title": "JavaScript Lecture",
+        "Description": "Lecture refreshing basic JS syntax and uses."
+      },
+      "Lecture 8": {
+        "Title": "Lab 3 Work",
+        "Description": "Working on lab 3 during the class."
+      },
+      "Lecture 9": {
+        "Title": "Project Proposal Presentations",
+        "Description": "Students presented their project proposals in class."
+      },
+      "Lecture 10": {
+        "Title": "JavaScript Lecture",
+        "Description": "Continuations of JavaScript concepts."
+      },
+      "Lecture 11": {
+        "Title": "AJAX and JSON",
+        "Description": "Refresher on AJAX and JSON and how they work."
+      },
+      "Lecture 12": {
+        "Title": "Generative AI",
+        "Description": "Read articles about Gen AI and worked on lab 4."
+      },
+      "Lecture 13": {
+        "Title": "Frontend Optimization",
+        "Description": "Lecture on how frontend works as a whole and how to optimize a web system."
+      },
+      "Lecture 14": {
+        "Title": "Bloomber Terminal Field Trip",
+        "Description": "Introduction to bloomberg terminals in Pittsburg."
+      },
+      "Lecture 15": {
+        "Title": "Midterm Presentations",
+        "Description": "Students presented their midterm project presentations in class."
+      },
+      "Lecture 16": {
+        "Title": "PHP",
+        "Description": "Lecture on PHP syntax and basic concepts."
+      },
+      "Lecture 17": {
+        "Title": "PHP Interfaces, Abstract Classes, Polymorphism",
+        "Description": "Interfaces, classes, and polymorphism."
+      },
+      "Lecture 18": {
+        "Title": "Work on lab7",
+        "Description": "Worked on lab 7 with the TA."
+      }
+    },
+    "Labs": {
+      "Lab 1": {
+        "Title": "Lab 1 - Portofolio Website",
+        "Description": "Created a portofolio website for our group project Data Pulse."
+      },
+      "Lab 2": {
+        "Title": "Lab 2 - Constitution Day Web App",
+        "Description": "Created a website intended to educate readers about the contituion and its content."
+      },
+      "Lab 3": {
+        "Title": "Lab 3 - JavaScript, AJAX, JSON, using APIs",
+        "Description": "Created a web app with a weather API and another API of choice that displays Troy\'s current weather."
+      },
+      "Lab 4": {
+        "Title": "Lab 4 - Generative AI",
+        "Description": "Created the same website as in lab 3, but using only Gen AI to write all the code."
+      },
+      "Lab 5": {
+        "Title": "Lab 5 - Bloomberg Terminal",
+        "Description": "Reflected on how to use the Bloomber Terminal, and how we could implement it into our project."
+      },
+      "Lab 6": {
+        "Title": "Lab 6 - PHP, OOP and Input Handling",
+        "Description": "Created a simple calculator using PHP and classes."
+      }
+    }
+  }
+}'
+WHERE title = 'Spooky Web Sys';
+```
