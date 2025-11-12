@@ -261,3 +261,5 @@ SET course_json = '{
 }'
 WHERE title = 'Spooky Web Sys';
 ```
+## Parts 4 & 5
+Frontend and backend in lab7.php file
