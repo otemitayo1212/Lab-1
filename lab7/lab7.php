@@ -1,9 +1,9 @@
 <?php
-// Database configuration from the shadow realm
+// Database configuration 
 $host = 'localhost';
 $dbname = 'lab7';
 $username = 'root'; // Change to your username
-$password = '';     // Change to your password`1
+$password = '';     // Change to your password
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -32,35 +32,46 @@ if (isset($_POST['archive'])) {
             archived_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )");
         
-        // Fetch JSON data
-        $stmt = $pdo->prepare("SELECT course_content FROM courses WHERE crn = 31313");
+        // Fetch JSON data using course_json column and CRN 12345
+        $stmt = $pdo->prepare("SELECT course_json FROM courses WHERE crn = 12345");
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        if ($result && $result['course_content']) {
-            $courseData = json_decode($result['course_content'], true);
+        if ($result && $result['course_json']) {
+            $courseData = json_decode($result['course_json'], true);
             
-            // Clear existing archives
-            $pdo->exec("TRUNCATE TABLE archived_lectures");
-            $pdo->exec("TRUNCATE TABLE archived_labs");
-            
-            // Archive lectures
-            if (isset($courseData['Websys_course']['Lectures'])) {
-                $stmt = $pdo->prepare("INSERT INTO archived_lectures (lecture_key, title, description) VALUES (?, ?, ?)");
-                foreach ($courseData['Websys_course']['Lectures'] as $key => $lecture) {
-                    $stmt->execute([$key, $lecture['Title'], $lecture['Description']]);
+            if ($courseData && isset($courseData['Websys_course'])) {
+                // Clear existing archives
+                $pdo->exec("TRUNCATE TABLE archived_lectures");
+                $pdo->exec("TRUNCATE TABLE archived_labs");
+                
+                $lectureCount = 0;
+                $labCount = 0;
+                
+                // Archive lectures
+                if (isset($courseData['Websys_course']['Lectures'])) {
+                    $stmt = $pdo->prepare("INSERT INTO archived_lectures (lecture_key, title, description) VALUES (?, ?, ?)");
+                    foreach ($courseData['Websys_course']['Lectures'] as $key => $lecture) {
+                        $stmt->execute([$key, $lecture['Title'], $lecture['Description']]);
+                        $lectureCount++;
+                    }
                 }
-            }
-            
-            // Archive labs
-            if (isset($courseData['Websys_course']['Labs'])) {
-                $stmt = $pdo->prepare("INSERT INTO archived_labs (lab_key, title, description) VALUES (?, ?, ?)");
-                foreach ($courseData['Websys_course']['Labs'] as $key => $lab) {
-                    $stmt->execute([$key, $lab['Title'], $lab['Description']]);
+                
+                // Archive labs
+                if (isset($courseData['Websys_course']['Labs'])) {
+                    $stmt = $pdo->prepare("INSERT INTO archived_labs (lab_key, title, description) VALUES (?, ?, ?)");
+                    foreach ($courseData['Websys_course']['Labs'] as $key => $lab) {
+                        $stmt->execute([$key, $lab['Title'], $lab['Description']]);
+                        $labCount++;
+                    }
                 }
+                
+                $archiveMessage = "✅ Successfully archived {$lectureCount} lectures and {$labCount} labs into the eternal database!";
+            } else {
+                $archiveMessage = "⚠️ JSON data found but structure is invalid. Check your JSON format!";
             }
-            
-            $archiveMessage = "✅ Course content successfully archived in the eternal database!";
+        } else {
+            $archiveMessage = "⚠️ No course content found in CRN 12345. Make sure the JSON data exists!";
         }
     } catch(PDOException $e) {
         $archiveMessage = "💀 Archive ritual failed: " . $e->getMessage();
@@ -78,15 +89,19 @@ if (isset($_POST['delete_archives'])) {
     }
 }
 
-// Fetch course content for display
+// Fetch course content for display using course_json column
 $courseContent = null;
+$courseName = "Spooky Web Systems";
 try {
-    $stmt = $pdo->prepare("SELECT course_content FROM courses WHERE crn = 31313");
+    $stmt = $pdo->prepare("SELECT title, course_json FROM courses WHERE crn = 12345");
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    if ($result && $result['course_content']) {
-        $courseContent = json_decode($result['course_content'], true);
+    if ($result) {
+        $courseName = $result['title'];
+        if ($result['course_json']) {
+            $courseContent = json_decode($result['course_json'], true);
+        }
     }
 } catch(PDOException $e) {
     $error = "Failed to summon course content: " . $e->getMessage();
@@ -97,7 +112,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎃 Haunted LMS - Spooky Web Systems 👻</title>
+    <title>🎃 Haunted LMS - <?php echo htmlspecialchars($courseName); ?> 👻</title>
     <style>
         * {
             margin: 0;
@@ -336,6 +351,16 @@ try {
             animation: fadeIn 0.5s;
         }
         
+        .message.warning {
+            border-color: #ff9800;
+            color: #ff9800;
+        }
+        
+        .message.error {
+            border-color: #ff0000;
+            color: #ff0000;
+        }
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -367,21 +392,32 @@ try {
             color: #b366ff;
             font-style: italic;
         }
+        
+        .debug-info {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #666;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #999;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🎃 HAUNTED LMS 👻</h1>
-            <p class="subtitle">💀 Spooky Web Systems - Where Learning is Frightfully Fun! 🕷️</p>
+            <p class="subtitle">💀 <?php echo htmlspecialchars($courseName); ?> - Where Learning is Frightfully Fun! 🕷️</p>
         </header>
         
         <?php if (isset($archiveMessage)): ?>
-            <div class="message"><?php echo $archiveMessage; ?></div>
+            <div class="message <?php echo (strpos($archiveMessage, '⚠️') !== false) ? 'warning' : ''; ?>">
+                <?php echo $archiveMessage; ?>
+            </div>
         <?php endif; ?>
         
         <?php if (isset($error)): ?>
-            <div class="message" style="border-color: #ff0000; color: #ff0000;">
+            <div class="message error">
                 <?php echo $error; ?>
             </div>
         <?php endif; ?>
@@ -391,7 +427,7 @@ try {
             <aside class="navigation">
                 <h2>📚 Cursed Curriculum</h2>
                 
-                <?php if ($courseContent): ?>
+                <?php if ($courseContent && isset($courseContent['Websys_course'])): ?>
                     <!-- Lectures Section -->
                     <?php if (isset($courseContent['Websys_course']['Lectures'])): ?>
                         <div class="nav-section">
@@ -422,9 +458,19 @@ try {
                         </div>
                     <?php endif; ?>
                 <?php else: ?>
-                    <p style="color: #666; text-align: center; padding: 20px;">
-                        No cursed content found... 👻
-                    </p>
+                    <div style="color: #ff9800; padding: 20px; text-align: center;">
+                        <p style="margin-bottom: 10px;">⚠️ No cursed content found... 👻</p>
+                        <p style="font-size: 0.9em;">Make sure you've run the Part 3 SQL commands!</p>
+                        <div class="debug-info" style="margin-top: 15px; text-align: left;">
+                            <strong>Debug Info:</strong><br>
+                            - Looking for CRN: 12345<br>
+                            - Column: course_json<br>
+                            - JSON found: <?php echo $result && $result['course_json'] ? 'Yes' : 'No'; ?><br>
+                            <?php if ($courseContent): ?>
+                            - JSON structure: <?php echo isset($courseContent['Websys_course']) ? 'Valid' : 'Invalid'; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 <?php endif; ?>
             </aside>
             
@@ -449,14 +495,14 @@ try {
             
             <form method="post" style="display: inline;">
                 <button type="submit" name="archive" class="archive-btn" 
-                        onclick="return confirm('📦 Archive all course content into separate database tables?');">
+                        onclick="return confirm('📦 Archive all course content into separate database tables?\n\nThis will create:\n- archived_lectures table\n- archived_labs table');">
                     📦 Archive Content
                 </button>
             </form>
             
             <form method="post" style="display: inline;">
                 <button type="submit" name="delete_archives" class="delete-btn" 
-                        onclick="return confirm('🔥 Are you sure you want to banish the archive tables forever?');">
+                        onclick="return confirm('🔥 Are you sure you want to banish the archive tables forever?\n\nThis will DROP:\n- archived_lectures\n- archived_labs');">
                     🔥 Delete Archive Tables
                 </button>
             </form>
@@ -465,6 +511,9 @@ try {
         <footer>
             <p>⚠️ Warning: This LMS may contain traces of supernatural activity ⚠️</p>
             <p>Created with 💀 for Web Systems Lab 7</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                Course: <?php echo htmlspecialchars($courseName); ?> (CRN: 12345)
+            </p>
         </footer>
     </div>
     
